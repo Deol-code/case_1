@@ -1,0 +1,19 @@
+A = [5, -2, 10, 7, 4, -4, 5, -5, -7, -4]
+
+minIndex = A.index(min(A))
+maxIndex = A.index(max(A))
+
+if minIndex < maxIndex:
+    startIndex = minIndex + 1
+    endIndex = maxIndex
+else:
+    startIndex = maxIndex + 1
+    endIndex = minIndex
+
+result = 0
+
+for i in range(startIndex, endIndex):
+    if A[i] < 0:
+        result += A[i]
+
+print(f'Результат: {result}')
